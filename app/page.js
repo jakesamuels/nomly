@@ -1,7 +1,11 @@
-import React from "react";
+import { SearchRecipes } from "@/components/SearchRecipes";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <SearchRecipes />
+    </div>
+  );
 };
 
 export default Home;
