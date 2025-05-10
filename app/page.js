@@ -1,9 +1,9 @@
-import { SearchRecipes } from "@/components/SearchRecipes";
+import Hero from "@/components/Hero";
 
 const Home = () => {
   return (
     <div>
-      <SearchRecipes />
+      <Hero />
     </div>
   );
 };
