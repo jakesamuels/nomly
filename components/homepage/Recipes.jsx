@@ -34,7 +34,7 @@ const Recipes = () => {
   return (
     <div>
       <p className="text-center text-3xl my-4">TODO - Filtering</p>
-      <div className="mx-auto w-[87.5%] md:grid md:w-[89.7%] md:max-w-[689px] grid-cols-2 gap-4  lg:grid-cols-3 lg:max-w-[1110px]">
+      <div className="mx-auto w-[87.5%] md:grid md:w-[89.7%] md:max-w-[689px] grid-cols-2 gap-6  lg:grid-cols-3 lg:max-w-[1110px]">
         {currentRecipes.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
