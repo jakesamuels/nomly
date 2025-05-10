@@ -1,24 +1,33 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <div className="flex flex-col items-center justify-center mb-8">
-      <figure className="rounded-full mb-3">
-        <Image
-          src={recipe.image}
-          width={800}
-          height={800}
-          alt={recipe.title}
-          className="rounded-full shadow-lg mb-3 w-full  object-cover"
-        />
-      </figure>
-      <figcaption className="text-lg font-semibold text-center mb-4">
+    <Link
+      href="/"
+      className={`relative rounded-lg w-full flex flex-col mb-8 md:mb-0 justify-end bg-[url(${recipe.image})] h-[300px] p-4 xl:hover:scale-[1.05] transition-all`}
+      style={{
+        backgroundImage: `url(${recipe.image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundColor: "rgba(0,0,0,0.15)",
+        backgroundBlendMode: "darken",
+      }}
+    >
+      <Image
+        src="/logo.png"
+        width={60}
+        height={60}
+        alt="Nomly logo"
+        className="absolute top-4 left-4"
+      />
+
+      {/* TODO - ADD FAVOURITE ICON (Heart?) */}
+
+      <p className="text-xl font-bold text-white text-shadow-md">
         {recipe.title}
-      </figcaption>
-      <button className="bg-green-300 rounded-full py-1 px-8 text-lg font-normal text-white text-shadow-sm">
-        View
-      </button>
-    </div>
+      </p>
+    </Link>
   );
 };
 
