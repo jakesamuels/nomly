@@ -1,22 +1,17 @@
 "use client";
 import { useState } from "react";
-const apiKey = process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY;
+import { searchRecipesBytTitle } from "@/utils/utils";
 
 export const SearchRecipes = () => {
   const [query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState(null);
+  const [recipes, setRecipes] = useState([]);
 
   const handleSearch = async () => {
     try {
-      const data = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&titleMatch=${query}&number=100`
-      );
-
-      const recipeData = await data.json();
-
+      const recipeData = await searchRecipesBytTitle(query);
       setRecipes(recipeData);
     } catch (error) {
-      console.log(`Error: ${error}`);
+      console.error(`Error: ${error}`);
     }
   };
 
@@ -26,10 +21,11 @@ export const SearchRecipes = () => {
     <div>
       <input
         type="text"
-        className="bg-red-500"
         name="query"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="Find your favourite dish"
+        className="border-1 border-solid border-gray-300 rounded-xl"
       />
       <button onClick={handleSearch}>Search</button>
     </div>
