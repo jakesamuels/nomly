@@ -1,19 +1,9 @@
 "use client";
-import { useState } from "react";
-import { searchRecipesBytTitle } from "@/utils/utils";
+
+import { useRecipeContext } from "@/context/RecipeContext";
 
 export const SearchRecipes = () => {
-  const [query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
-
-  const handleSearch = async () => {
-    try {
-      const recipeData = await searchRecipesBytTitle(query);
-      setRecipes(recipeData);
-    } catch (error) {
-      console.error(`Error: ${error}`);
-    }
-  };
+  const { recipes, query, setQuery, handleSearch } = useRecipeContext();
 
   console.log(recipes);
 
