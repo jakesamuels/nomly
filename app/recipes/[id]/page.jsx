@@ -23,9 +23,11 @@ const page = () => {
     }
   }, [id]);
 
-  console.log(recipe);
-
-  return <div>page</div>;
+  return (
+    <div>
+      <h1>{recipe?.recipe?.label}</h1>
+    </div>
+  );
 };
 
 export default page;

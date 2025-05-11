@@ -7,6 +7,8 @@ const Nav = () => {
       <Link href="/">
         <Image src="/logo.png" width={50} height={50} alt="Nomly logo" />
       </Link>
+
+      {/* Mobile  */}
     </nav>
   );
 };

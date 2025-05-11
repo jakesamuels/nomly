@@ -2,7 +2,7 @@
 
 import { useRecipeContext } from "@/context/RecipeContext";
 
-export const SearchRecipes = () => {
+const SearchRecipes = () => {
   const { recipes, query, setQuery, handleSearch } = useRecipeContext();
 
   return (
@@ -19,3 +19,6 @@ export const SearchRecipes = () => {
     </div>
   );
 };
+
+
+export default SearchRecipes;

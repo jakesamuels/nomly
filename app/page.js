@@ -1,13 +1,10 @@
 import Hero from "@/components/homepage/Hero";
-import RandomRecipes from "@/components/homepage/RandomRecipes";
-// import Recipes from "@/components/homepage/Recipes";
+import { SearchRecipes } from "@/components/recipes_search/SearchRecipes";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <RandomRecipes />
-      {/* <Recipes /> */}
     </div>
   );
 };
