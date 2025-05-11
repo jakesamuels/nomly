@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+nav {
+  width: 87.2%;
+  margin: auto;
+}
+
+section {
+  width: 87.2%;
+  margin: auto;
+}
+
+@media (min-width: 48rem) {
+  nav {
+    width: 89.7%;
+  }
+
+  section {
+    width: 89.7%;
+  }
+}
+
+@media (min-width: 64rem) {
+  nav {
+    width: 77.1%;
+  }
+
+  section {
+    width: 77.1%;
+  }
+}
