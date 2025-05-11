@@ -1,5 +1,3 @@
-import { SearchRecipes } from "../SearchRecipes";
-
 const Hero = () => {
   return (
     <section>
@@ -9,7 +7,6 @@ const Hero = () => {
         needs, and even your pantry staples to deliver delicious dishes crafted
         just for you.
       </p>
-      {/* <SearchRecipes /> */}
     </section>
   );
 };
