@@ -5,8 +5,6 @@ import { useRecipeContext } from "@/context/RecipeContext";
 export const SearchRecipes = () => {
   const { recipes, query, setQuery, handleSearch } = useRecipeContext();
 
-  console.log(recipes);
-
   return (
     <div>
       <input
