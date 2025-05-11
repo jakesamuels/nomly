@@ -1,12 +1,12 @@
-import SearchedRecipes from "@/components/recipes_search/SearchedRecipes";
-import SearchRecipes from "@/components/recipes_search/SearchRecipes";
+import RecipeSearchBar from "@/components/recipes_search/RecipeSearchBar";
+import RecipeResults from "@/components/recipes_search/RecipeResults";
 
 const page = () => {
   return (
     <div>
-      <SearchRecipes />
+      <RecipeSearchBar />
 
-      <SearchedRecipes />
+      <RecipeResults />
     </div>
   );
 };

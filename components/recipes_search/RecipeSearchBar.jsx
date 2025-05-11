@@ -2,7 +2,7 @@
 
 import { useRecipeContext } from "@/context/RecipeContext";
 
-const SearchRecipes = () => {
+const RecipeSearchBar = () => {
   const { recipes, query, setQuery, handleSearch } = useRecipeContext();
 
   return (
@@ -16,9 +16,10 @@ const SearchRecipes = () => {
         className="border-1 border-solid border-gray-300 rounded-xl"
       />
       <button onClick={handleSearch}>Search</button>
+
+      <p className="text-center text-3xl my-4">TODO - Filtering</p>
     </div>
   );
 };
 
-
-export default SearchRecipes;
+export default RecipeSearchBar;

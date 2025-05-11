@@ -1,5 +1,5 @@
 import Hero from "@/components/homepage/Hero";
-import { SearchRecipes } from "@/components/recipes_search/SearchRecipes";
+import { SearchRecipes } from "@/components/recipes_search/RecipeSearchBar";
 
 const Home = () => {
   return (
