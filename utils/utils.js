@@ -14,3 +14,17 @@ export const searchRecipesBytTitle = async (query) => {
     console.log(`Error: ${error}`);
   }
 };
+
+export const fetchRecipeById = async (id) => {
+  try {
+    const data = await fetch(
+      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`
+    );
+
+    const recipeData = await data.json();
+
+    return recipeData;
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+};
