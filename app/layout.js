@@ -1,5 +1,6 @@
 import "./globals.css";
 import { RecipeProvider } from "@/context/RecipeContext";
+import Nav from "@/components/layout/Nav";
 
 export const metadata = {
   title: "Nomly",
@@ -10,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <RecipeProvider>{children}</RecipeProvider>
+        <RecipeProvider>
+          <Nav />
+          {children}
+        </RecipeProvider>
       </body>
     </html>
   );
