@@ -11,7 +11,7 @@ export const searchRecipesBytTitle = async (query) => {
 
     return recipeData;
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 };
 
@@ -25,6 +25,20 @@ export const fetchRecipeById = async (id) => {
 
     return recipeData;
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
+  }
+};
+
+export const fetchRandomRecipes = async () => {
+  try {
+    const data = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=3`
+    );
+
+    const recipeData = await data.json();
+
+    return recipeData;
+  } catch (error) {
+    console.error(`Error: ${error}`);
   }
 };
