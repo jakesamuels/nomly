@@ -4,7 +4,7 @@ import Link from "next/link";
 const RecipeCard = ({ recipe }) => {
   return (
     <Link
-      href="/"
+      href={`/recipes/${recipe.id}`}
       className={`relative rounded-lg w-full flex flex-col mb-8 md:mb-0 justify-end bg-[url(${recipe.image})] h-[300px] p-4 xl:hover:scale-[1.05] transition-all`}
       style={{
         backgroundImage: `url(${recipe.image})`,
